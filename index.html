@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phrasal Verbs App</title>
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+        #score-display {
+            margin-top: 10px;
+        }
+        #sentence-container, #meaning-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-menu">
+        <h1>Phrasal Verbs App</h1>
+        <button onclick="showAddPhrasalVerb()">Add Phrasal Verb</button>
+        <button onclick="startContextTest()">Start Context Test</button>
+        <button onclick="startMeaningTest()">Start Meaning Test</button>
+        <button onclick="showProgress()">Show Progress</button>
+        <button onclick="exportData()">Export Data</button>
+        <button onclick="importData()">Import Data</button>
+    </div>
+
+    <!-- Add Phrasal Verb Form -->
+    <div id="add-phrasal-verb" class="hidden">
+        <h2>Add Phrasal Verb</h2>
+        <form id="add-form">
+            <label for="phrasal-verb">Phrasal Verb:</label>
+            <input type="text" id="phrasal-verb" required><br><br>
+
+            <label for="meaning">Meaning:</label>
+            <input type="text" id="meaning" required><br><br>
+
+            <label for="sentence1">Sentence 1:</label>
+            <input type="text" id="sentence1" required><br><br>
+
+            <label for="sentence2">Sentence 2:</label>
+            <input type="text" id="sentence2" required><br><br>
+
+            <label for="sentence3">Sentence 3:</label>
+            <input type="text" id="sentence3" required><br><br>
+
+            <label for="sentence4">Sentence 4:</label>
+            <input type="text" id="sentence4" required><br><br>
+
+            <label for="sentence5">Sentence 5:</label>
+            <input type="text" id="sentence5" required><br><br>
+
+            <label for="sentence6">Sentence 6:</label>
+            <input type="text" id="sentence6" required><br><br>
+
+            <button type="submit">Add Phrasal Verb</button>
+        </form>
+        <button onclick="returnToMain()">Return to Main Menu</button>
+    </div>
+
+    <!-- Context Test -->
+    <div id="context-test" class="hidden">
+        <h2>Context Test</h2>
+        <div id="sentence-container"></div>
+        <div id="score-display">Score: 0</div>
+        <button onclick="returnToMain()">Return to Main Menu</button>
+    </div>
+
+    <!-- Meaning Test -->
+    <div id="meaning-test" class="hidden">
+        <h2>Meaning Test</h2>
+        <div id="meaning-container"></div>
+        <div id="meaning-score-display">Score: 0</div>
+        <button onclick="returnToMain()">Return to Main Menu</button>
+    </div>
+
+    <!-- Progress -->
+    <div id="progress" class="hidden">
+        <h2>Progress</h2>
+        <p>Coming soon!</p>
+        <button onclick="returnToMain()">Return to Main Menu</button>
+    </div>
+
+    <div id="phrasal-verbs-list"></div>
+
+       <script src="script.js"></script>
+</body>
+</html>
+
